@@ -3,5 +3,246 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "life-cycle-hooks": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/life-cycle-hooks",
+      "sourceRoot": "projects/life-cycle-hooks/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/life-cycle-hooks",
+            "index": "projects/life-cycle-hooks/src/index.html",
+            "main": "projects/life-cycle-hooks/src/main.ts",
+            "polyfills": "projects/life-cycle-hooks/src/polyfills.ts",
+            "tsConfig": "projects/life-cycle-hooks/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/life-cycle-hooks/src/favicon.ico",
+              "projects/life-cycle-hooks/src/assets"
+            ],
+            "styles": [
+              "projects/life-cycle-hooks/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/life-cycle-hooks/src/environments/environment.ts",
+                  "with": "projects/life-cycle-hooks/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "life-cycle-hooks:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "life-cycle-hooks:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "life-cycle-hooks:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/life-cycle-hooks/src/test.ts",
+            "polyfills": "projects/life-cycle-hooks/src/polyfills.ts",
+            "tsConfig": "projects/life-cycle-hooks/tsconfig.spec.json",
+            "karmaConfig": "projects/life-cycle-hooks/karma.conf.js",
+            "assets": [
+              "projects/life-cycle-hooks/src/favicon.ico",
+              "projects/life-cycle-hooks/src/assets"
+            ],
+            "styles": [
+              "projects/life-cycle-hooks/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/life-cycle-hooks/tsconfig.app.json",
+              "projects/life-cycle-hooks/tsconfig.spec.json",
+              "projects/life-cycle-hooks/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/life-cycle-hooks/e2e/protractor.conf.js",
+            "devServerTarget": "life-cycle-hooks:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "life-cycle-hooks:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "component-interation": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/component-interation",
+      "sourceRoot": "projects/component-interation/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/component-interation",
+            "index": "projects/component-interation/src/index.html",
+            "main": "projects/component-interation/src/main.ts",
+            "polyfills": "projects/component-interation/src/polyfills.ts",
+            "tsConfig": "projects/component-interation/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/component-interation/src/favicon.ico",
+              "projects/component-interation/src/assets"
+            ],
+            "styles": [
+              "projects/component-interation/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/component-interation/src/environments/environment.ts",
+                  "with": "projects/component-interation/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "component-interation:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "component-interation:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "component-interation:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/component-interation/src/test.ts",
+            "polyfills": "projects/component-interation/src/polyfills.ts",
+            "tsConfig": "projects/component-interation/tsconfig.spec.json",
+            "karmaConfig": "projects/component-interation/karma.conf.js",
+            "assets": [
+              "projects/component-interation/src/favicon.ico",
+              "projects/component-interation/src/assets"
+            ],
+            "styles": [
+              "projects/component-interation/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/component-interation/tsconfig.app.json",
+              "projects/component-interation/tsconfig.spec.json",
+              "projects/component-interation/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/component-interation/e2e/protractor.conf.js",
+            "devServerTarget": "component-interation:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "component-interation:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "component-interation"
 }

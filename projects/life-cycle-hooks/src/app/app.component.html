@@ -1,0 +1,8 @@
+<h1>Life Cycle Hooks</h1>
+<h4>App Component</h4>
+<button class="btn btn-danger cc" type="button" (click)="isChild1Activated=!isChild1Activated">Toggle Child1</button>
+
+<app-child1 [inpFromParent]="10000" *ngIf="isChild1Activated"></app-child1>
+
+<a routerLink="child1/{{dynamicQueryVal}}" (click)="changeDynamicQueryVal()">Visit Child 1 Page</a>
+<router-outlet></router-outlet>
