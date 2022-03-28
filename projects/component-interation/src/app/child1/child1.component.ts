@@ -8,10 +8,7 @@ import { User } from '../user';
 })
 export class Child1Component implements OnInit {
 
-  @Input() inpPropStr!: string;
-  @Input() inpPropBool!: boolean;
-  @Input() inpPropArray!: string[];
-  @Input() inpPropObj!: User;
+  propStr: string = "Hello Angular!";
 
   constructor() { }
 

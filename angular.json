@@ -102,19 +102,6 @@
             "scripts": []
           }
         },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/life-cycle-hooks/tsconfig.app.json",
-              "projects/life-cycle-hooks/tsconfig.spec.json",
-              "projects/life-cycle-hooks/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
@@ -226,19 +213,6 @@
               "projects/component-interation/src/styles.scss"
             ],
             "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/component-interation/tsconfig.app.json",
-              "projects/component-interation/tsconfig.spec.json",
-              "projects/component-interation/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         },
         "e2e": {
