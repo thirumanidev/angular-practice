@@ -1,4 +1,4 @@
 export interface User {
-    name: string;
-    regNo: number;
+    name: string,
+    phone: string
 }

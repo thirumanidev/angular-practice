@@ -8,36 +8,17 @@ import { User } from './user';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent { 
+export class AppComponent {
 
-  @ViewChild("child1Ref", {static: true}) child1!: Child1Component;
-  @ViewChild("ngSelectRef") ngSelectRef!: NgSelectComponent;
-  @ViewChild("inpRef") inpRef!: ElementRef;
-
-  selectedCar!: number;
-
-  cars = [
-      { id: 1, name: 'Volvo' },
-      { id: 2, name: 'Saab' },
-      { id: 3, name: 'Opel' },
-      { id: 4, name: 'Audi' },
+  users: User[] = [
+    {
+      name: 'Bell',
+      phone: '9874563210'
+    },
+    {
+      name: 'Aariya',
+      phone: '8796541320'
+    }
   ];
-
-  constructor(private cdf: ChangeDetectorRef) {
-
-  }
-
-  ngOnInit() {
-    // console.log(this.child1.propStr);
-    // this.child1.propStr = "Hello World!";
-  }
-
-  ngAfterViewInit() {
-    // console.log(this.child1);
-    console.log(this.inpRef.nativeElement.value);
-    
-    this.child1.propStr = "Hello World!, ngAfterViewInit";
-    // this.cdf.detectChanges();
-  }
   
 }

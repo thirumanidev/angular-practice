@@ -1,0 +1,10 @@
+<!-- <ng-content select="[first]"></ng-content>
+<ng-content select="[second]" *ngIf="isShow"></ng-content> -->
+<h2>Child 2</h2>
+<!-- <ng-content *ngIf="isShow"></ng-content> -->
+
+<div *ngIf="isShow">
+    <ng-container [ngTemplateOutlet]="childContent">
+
+    </ng-container>
+</div>

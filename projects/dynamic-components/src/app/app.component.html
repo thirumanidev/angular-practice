@@ -1,0 +1,14 @@
+<button class="btn btn-primary" (click)="openModal()">Open Popup</button>
+
+<app-modal></app-modal>
+
+<hr>
+
+<div class="buttons-container">
+    <button class="show-btn" (click)="showDynamicComponent()">Show component</button>
+    <button class="remove-btn" (click)="removeDynamicComponent()">
+      Remove component
+    </button>
+  </div>
+  <!-- <ng-template #dynamic></ng-template> -->
+  <ng-template appModalHost></ng-template>
